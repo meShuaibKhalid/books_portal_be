@@ -16,16 +16,10 @@ sequelize.sync().then((result) => {
 
 }).catch((err) => { console.log(err); });
 
+app.listen(3000, () => { console.log('the server is on 3000'); })
 
 app.get('/', function (req, res) {
     res.send("Hello, World!");
-  });
-  
-
-
+});
 
 app.use('/books', books_router);
-
-
-
-app.listen(3000, () => { console.log('the server is on 3000'); })
