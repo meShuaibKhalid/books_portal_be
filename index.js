@@ -5,7 +5,9 @@ const app = express();
 const books_router = require('./routes/books');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({
+    origin: "*"
+}));
 
 sequelize.sync().then((result) => {
     if (result) {
