@@ -18,8 +18,9 @@ sequelize.sync().then((result) => {
 
 
 app.get('/', function (req, res) {
-    // res.sendFile(path.join(__dirname+'/dist/front-end/index.html'));
-});
+    res.send("Hello, World!");
+  });
+  
 
 
 
